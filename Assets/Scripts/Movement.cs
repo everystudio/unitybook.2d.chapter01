@@ -12,4 +12,9 @@ public class Movement : MonoBehaviour
             Input.GetAxisRaw("Vertical")).normalized;
         transform.Translate(moveDirection * speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+    }
 }
