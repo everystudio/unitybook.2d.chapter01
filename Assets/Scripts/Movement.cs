@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+    [SerializeField] private GameObject clearPanel;
     void Update()
     {
         Vector2 moveDirection = new Vector2(
@@ -15,6 +16,6 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        clearPanel.SetActive(true);
     }
 }
